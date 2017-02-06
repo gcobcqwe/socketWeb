@@ -1,7 +1,7 @@
 #socketWeb
 #Demo 
-ip: Servername<br>
-port: 3000<br>
+IP: Servername<br>
+Port: 3000<br>
 Chat room:<br>
 ![](http://imgur.com/DIga87b.png)<br>
 
