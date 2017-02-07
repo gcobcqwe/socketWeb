@@ -22,10 +22,6 @@ app.set('port', port);
 
 var server = http.createServer(app);
 
-/**
- * Listen on provided port, on all network interfaces.
- */
-
 //socket.io
 var express = require('express');
 var router = express.Router();
@@ -38,7 +34,9 @@ io.on('connection', function(socket){
     console.log('message: ' + msg);
   });
 });
-
+/**
+ * Listen on provided port, on all network interfaces.
+ */
 server.listen(port, function(){
   console.log('listening on *:3000');
 });
