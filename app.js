@@ -5,8 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var Chat = require('./routes/Chat');
-var Users = require('./routes/Users');
+var chat = require('./routes/chat');
+var users = require('./routes/users');
+var tasks = require('./routes/tasks');
+var punch = require('./routes/punch');
 
 var app = express();
 
@@ -22,10 +24,14 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', Chat);
-app.use('/Users', Users);
+//設定起始路徑
+app.use(express.static(path.join(__dirname, 'client')));
+
+app.use('/', chat);
+app.use('/users', users);
+app.use('/tasks', tasks);
+app.use('/punch', punch);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
