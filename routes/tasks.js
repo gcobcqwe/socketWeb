@@ -6,7 +6,7 @@ var router = express.Router();
 var mongojs = require('mongojs');
 //mongojs(connectionString, [collections])
 var mycollection = 'tasks';
-var db =  mongojs('yourdb',[mycollection]);
+var db =  mongojs('mongodb://punchcard:a12345678@ds145019.mlab.com:45019/punchcard',[mycollection]);
 
 /* 取得所有訊息 */
 router.get('/', function(req, res, next) {
