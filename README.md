@@ -1,14 +1,14 @@
-#socketWeb
-#Demo 
+# socketWeb
+# Demo 
 IP: Servername<br>
 Port: 3000<br>
 Chat room:<br>
 ![](http://imgur.com/DIga87b.png)<br>
 
-#Reference
+# Reference
 socket.io : http://socket.io/get-started/chat/<br>
 
-#Environment
+# Environment
 This project depends on the following modules, please make sure they're ready locally.<br>
 <ol>
 <li>node.js</li>
@@ -17,7 +17,7 @@ This project depends on the following modules, please make sure they're ready lo
 <li>socket.io</li>
 </ol>
 
-#Install
+# Install
 
 The steps below can be taken to install the project and initialize it.
 
