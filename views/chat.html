@@ -23,8 +23,8 @@
     });
 
     function send(){
-      var time = Date.now()
-      socket.emit('chat message',time.toLocaleString() + $('#InputNameBox').val() + $('#InputBox').val());
+      var time =new Date().toLocaleString()
+      socket.emit('chat message',time +"   " +  $('#InputNameBox').val() + "  " + $('#InputBox').val());
       $('#InputBox').val('');
     };
 
