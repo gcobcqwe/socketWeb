@@ -23,7 +23,8 @@
     });
 
     function send(){
-      socket.emit('chat message', $('#InputBox').val());
+      var time = Date.now()
+      socket.emit('chat message',time.toLocaleString() + $('#InputNameBox').val() + $('#InputBox').val());
       $('#InputBox').val('');
     };
 
@@ -32,6 +33,9 @@
 <body>
 
 <ul id="messages"></ul>
+  <div id="bodyPart">
+    <input id="InputNameBox" type="text"/>
+  </div>
   <div id="bodyPart">
     <input id="InputBox" type="text"/><button id="InputBtn" onclick="send()">Send</button>
   </div>
